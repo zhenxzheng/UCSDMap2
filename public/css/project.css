@@ -1,0 +1,12 @@
+#marker{
+	font-size:4em;
+	position: absolute;
+}
+
+.result {
+	color: white;
+}
+button a{
+	text-decoration:none;
+	color: black;
+}

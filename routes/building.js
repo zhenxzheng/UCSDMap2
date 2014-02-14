@@ -1,6 +1,6 @@
-var data = require('../buildingdata.json')
+var buildings = require('../buildingdata.json');
 
 exports.view = function(req, res){
-	var buildingcode = req.params.
-  res.render('index', data);
+	var randomBuilding = buildings[Math.floor(buildings.length * Math.random())];
+	res.json(randomBuilding);
 };

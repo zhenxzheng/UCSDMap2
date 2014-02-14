@@ -1,5 +1,5 @@
-{
-	"buildings": [
+
+	 [
 		{
 			"code": "APM",
 			"name": "Applied Physics & Mathematics Building",
@@ -571,4 +571,3 @@
 			"buildingnumber": "137"
 		}
 	]
-}

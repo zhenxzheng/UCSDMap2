@@ -9,41 +9,30 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// Add any additional listeners here
-	// example: $("#div-id").click(functionToCall);
-	$("a.thumbnail").click(projectClick);
-	$("#seartchBtn").click(updateProject);
+	$("#searchBtn").click(updateResult);
 
 }
 
-function updateProject(e){
-	var buildingname = $('#project').val();
-	$(projectID).animate({
-		width: $('#width').val()
-	});
-	var newText = $('#description').val();
-	$(projectID + " .project-description").text(newText);
-}
 
-function addProjectDetails(e) {
+function updateResult(e) {
 	// Prevent following the link
 	e.preventDefault();
+	console.log("user clicked on search button");
 
-	// Get the div ID, e.g., "project3"
-	var projectID = $(this).closest('.project').attr('id');
-	// get rid of 'project' from the front of the id 'project3'
-	var idNumber = projectID.substr('project'.length);
-
-	console.log("/project/" + idNumber);
-	$.get("/project/" + idNumber, projectDetails);
-
-
+	$.get("/building", getBuildingDetails);
 }
 
-function projectDetails(result){
+function getBuildingDetails(result){
+
 	console.log(result);
-	//var projectID = '#'+ result['id'];
-	//console.log(projectID);
-	var detailsHTML = '<img src="' + result['image'] + '"class="img detailsImage">' + '<p>' + result['title'] + '</p>' + '<p><small>' + result['date'] + '</small></p>' + '<p>' + result['summary'] + '</p>';
-	$('#project'+result['id'] + ' .details').html(detailsHTML);
+	//set result HTML
+	var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom"><div class="container"><address><strong>'+result['name']+'</strong><br><small>'+result['code']+'</small><br>Location: '+result['location']+'<br>Building#: '+result['buildingnumber']+'</address></div></nav>';
+	$('.result').html(detailsHTML);
+
+
+	//get random corrdinates that are within the screen
+	var randomX = Math.floor(screen.width * Math.random());
+	var randomY = Math.floor(screen.height * Math.random());
+	var markerHTML = '<span class="glyphicon glyphicon-map-marker" style="margin-top:'+randomY+'px; margin-left:'+randomX+'px"></span>';
+	$('#marker').html(markerHTML);
 }

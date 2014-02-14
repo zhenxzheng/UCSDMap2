@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<!--<link href="/css/bootstrap-theme.min.css" rel="stylesheet">-->
-	<link href="/css/introHCI.css" rel="stylesheet">
+	<link href="/css/project.css" rel="stylesheet">
+
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -23,53 +24,24 @@
 		<div class="navbar-form navbar-left" role="search">
 			<div class="container">
 			    <div class="input-group">
-			      	<input type="text" class="form-control" placeholder="Search">
+			      	<input type="text" class="form-control" placeholder="Search" id="buildingInput">
 			     	<span class="input-group-btn">
-			        	<button class="btn btn-default" type="button" id="searchbtn">
-			        		<span class="glyphicon glyphicon-search"></span>
+			        	<button class="btn btn-default" type="button" id="searchBtn">
+			        		<a href="#marker"><span class="glyphicon glyphicon-search"></span></a>
 			        	</button>
 			      	</span>
 			    </div>
 			</div>
 		</div>
 	</nav>
-	<div id="marker">
-		<span class="glyphicon glyphicon-map-marker" style="position:fixed; margin-top: 200px; margin-left: 50px"></span>
-	</div>
+	<div id="marker"></div>
 	<div class="map">
 		<img src="images/UCSDMap.jpg">
 	</div>
-	<div class="result narbar-fixed-bottom"></div>
-	<!--	<h4>Projects</h4>
-		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
-		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
-		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-	<!--	{{#each projects}}
-		<div class="project" id="{{id}}">
-			<div class="thumbnail">
-				<a href="#">
-					<img src="images/{{image}}" alt="Lorem Pixel image" class="img detailsImage">
-					<p>{{name}}</p>
-				</a>
-				<div class="details"></div>
-			</div>
-		</div>
-		{{/each}}
-
-
-    <div class="input-group">
-      <input type="text" class="form-control">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">
-        	<span class="glyphicon glyphicon-search"></span>
-        </button>
-      </span>
-    </div>
-
-		-->
+	<div class="result" style="color:white"></div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/introHCI.js"></script>
+	<script src="/js/building.js"></script>
 </body>
 </html>
