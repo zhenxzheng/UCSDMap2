@@ -1,4 +1,4 @@
-lab6
+UCSD Map
 ====
 
-Lab 6: AJAX
+An application that is dedicated to UCSD student
