@@ -13,8 +13,8 @@ $(document).ready(function() {
  */
 function initializePage() {
 	$("#searchBtn").click(updateResult);
-	$('#map_canvas').css('width', screen.width);
-	$('#map_canvas').css('height', screen.height);
+	$('#map_canvas').css('width', window.innerWidth);
+	$('#map_canvas').css('height', window.innerHeight);
 }
 
 
