@@ -20,25 +20,27 @@
 </head>
 
 <body>
-	<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-form navbar-left" role="search">
-			<div class="container">
-			    <div class="input-group">
-			      	<input type="text" class="form-control" placeholder="Search" id="buildingInput">
-			     	<span class="input-group-btn">
-			        	<button class="btn btn-default" type="button" id="searchBtn">
-			        		<a href="#marker"><span class="glyphicon glyphicon-search"></span></a>
-			        	</button>
-			      	</span>
-			    </div>
+	<div class="container-fluid">
+		<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-form navbar-left" role="search">
+				<div class="container">
+				    <div class="input-group">
+				      	<input type="text" class="form-control" placeholder="Search" id="buildingInput">
+				     	<span class="input-group-btn">
+				        	<button class="btn btn-default" type="button" id="searchBtn">
+				        		<a href="#marker"><span class="glyphicon glyphicon-search"></span></a>
+				        	</button>
+				      	</span>
+				    </div>
+				</div>
 			</div>
+		</nav>
+		<div id="marker"></div>
+		<div class="map">
+			<img src="images/UCSDMap.jpg">
 		</div>
-	</nav>
-	<div id="marker"></div>
-	<div class="map">
-		<img src="images/UCSDMap.jpg">
+		<div class="result" style="color:white"></div>
 	</div>
-	<div class="result" style="color:white"></div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
