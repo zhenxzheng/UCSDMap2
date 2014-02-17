@@ -10,3 +10,7 @@ button a{
 	text-decoration:none;
 	color: black;
 }
+
+.map {
+	overflow: hidden;
+}
