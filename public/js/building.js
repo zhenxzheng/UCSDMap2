@@ -1,5 +1,15 @@
 'use strict';
 
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+h = h-73;
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
@@ -13,10 +23,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 	$("#searchBtn").click(updateResult);
-	$('#map_canvas').css('width', window.innerWidth);
-	$('#map_canvas').css('height', window.innerHeight);
+	$('#map_canvas').css('width', w);
+	$('#map_canvas').css('height', h);
 }
-
 
 function updateResult(e) {
 	// Prevent following the link
@@ -35,10 +44,10 @@ function getBuildingDetails(result){
 
 
 	//get random corrdinates that are within the screen
-	var randomX = Math.floor(screen.width * Math.random());
-	var randomY = Math.floor(screen.height * Math.random());
+	var randomX = Math.floor(w * Math.random());
+	var randomY = Math.floor(h * Math.random());
 	var markerHTML = '<span class="glyphicon glyphicon-map-marker" style="margin-top:'+randomY+'px; margin-left:'+randomX+'px"></span>';
-	$('#marker').html(markerHTML);
+	$('#marker').html(markerHTML);w
 }
 
 function GoogleMap()
@@ -46,7 +55,7 @@ function GoogleMap()
 	var map_canvas = document.getElementById('map_canvas');
     var map_options = {
       center: new google.maps.LatLng(32.881605,-117.230737),
-      zoom: 15,
+      zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(map_canvas, map_options)

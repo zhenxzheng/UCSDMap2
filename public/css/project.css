@@ -10,3 +10,6 @@ button a{
 	text-decoration:none;
 	color: black;
 }
+#map_canvas {
+	margin-top:73px;
+}
