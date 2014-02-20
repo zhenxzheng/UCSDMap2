@@ -27,7 +27,7 @@ function initializePage() {
 	$('#map_container').css('width', w);
 	$('#map_container').css('height', h);
 	$('#map_canvas').css('width', w);
-	$('#map_canvas').css('height', h);
+	$('#map_canvas').css('height', h-26);
 }
 
 function updateResult(e) {
