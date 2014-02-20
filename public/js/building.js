@@ -8,7 +8,7 @@ var h = window.innerHeight
 || document.documentElement.clientHeight
 || document.body.clientHeight;
 
-
+var pos;
 var map;
 var marker;
 
@@ -73,7 +73,7 @@ function GoogleMap()
 	//GPS Location
 	if(navigator.geolocation) {
 	    navigator.geolocation.getCurrentPosition(function(position) {
-	      var pos = new google.maps.LatLng(position.coords.latitude,
+	      pos = new google.maps.LatLng(position.coords.latitude,
 	                                       position.coords.longitude);
 
 	      var infowindow = new google.maps.InfoWindow({
@@ -138,7 +138,7 @@ function gpsControl( controlDiv, map )
 	controlImage.src = 'images/gps.png';
 	controlUI.appendChild(controlImage);
 	google.maps.event.addDomListener(controlUI, 'click', function() {
-      map.setCenter(new google.maps.LatLng(41.850033, -87.6500523))
+      map.setCenter(pos)
     });
 	
 }
