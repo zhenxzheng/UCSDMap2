@@ -12,8 +12,6 @@ var h = window.innerHeight
 var map;
 var marker;
 
-h = h-73;
-
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
@@ -26,6 +24,8 @@ $(document).ready(function() {
  */
 function initializePage() {
 	$("#searchBtn").click(updateResult);
+	$('#map_container').css('width', w);
+	$('#map_container').css('height', h);
 	$('#map_canvas').css('width', w);
 	$('#map_canvas').css('height', h);
 }
@@ -44,18 +44,19 @@ function getBuildingDetails(result){
 	var detailsHTML;
 	//set result HTML
 	if (result == 'No Result.'){
-		var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom"><div class="container"><strong>'+result+'</strong></div></nav>';
+		var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom" id="result"><div class="container"><strong>'+result+'</strong></div></nav>';
 	}
 	else {
-		var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom"><div class="container"><address><strong>'+result['name']+'</strong><br><small>'+result['code']+'</small><br>Location: '+result['location']+'<br>Building#: '+result['buildingnumber']+'</address></div></nav>';
+		var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom" id="result"><div class="container"><strong>'+result['name']+'</strong><br><small>'+result['location']+ " " +result['buildingnumber']+'</div></nav>';
 	}
 	$('.result').html(detailsHTML);
 
 	var pos = new google.maps.LatLng(result['lat'], result['long']);
-
+	var image
 	marker = new google.maps.Marker({
     	position: pos,
     	map: map,
+    	image: image,
     	title:"Testest!"
     });
 
@@ -78,7 +79,7 @@ function GoogleMap()
 	      var infowindow = new google.maps.InfoWindow({
 	        map: map,
 	        position: pos,
-	        content: 'Location found using HTML5.'
+	        content: 'You are here.'
 	      });
 
 	      map.setCenter(pos);
@@ -113,6 +114,7 @@ function pressEnter(e){
 	if (e.keyCode == 13){
 		var tb = document.getElementById('buildingInput');
 		updateResult(e);
+		$('#buildingInput').blur();
 		return false;
 	}
 }
