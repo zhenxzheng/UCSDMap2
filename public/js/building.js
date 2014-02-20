@@ -94,6 +94,7 @@ function GoogleMap()
 	// get map section ID
 	var map_canvas = document.getElementById('map_canvas');
 
+
 	// variable that stores map option
     var map_options = {
       center: new google.maps.LatLng(32.880011, -117.237179),
@@ -108,6 +109,38 @@ function GoogleMap()
 
     // Google map
     map = new google.maps.Map(map_canvas, map_options);
+
+	var gpsDiv = document.createElement('div');
+	var gpsButton = new gpsControl(gpsDiv, map);
+	gpsDiv.index = 1;
+	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(gpsDiv);
+}
+
+function gpsControl( controlDiv, map )
+{
+	//controlDiv = document.createElement('div');
+	controlDiv.style.padding = '5px';
+
+	var controlUI = document.createElement('div');
+	controlUI.style.backgroundColor = 'white';
+	controlUI.style.borderStyle = 'solid';
+	controlUI.style.borderWidth = '1px';
+	controlUI.style.cursor = 'pointer';
+	controlUI.style.textAlign = 'center';
+	controlUI.title = 'Click to locate yourself using GPS';
+	controlDiv.appendChild(controlUI);
+
+    //var setHomeText = document.createElement('div');
+    //setHomeText.innerHTML = '<strong>Set Home</strong>';
+    //controlUI.appendChild(setHomeText);
+
+	var controlImage = document.createElement('img');
+	controlImage.src = 'images/gps.png';
+	controlUI.appendChild(controlImage);
+	google.maps.event.addDomListener(controlUI, 'click', function() {
+      map.setCenter(new google.maps.LatLng(41.850033, -87.6500523))
+    });
+	
 }
 
 function pressEnter(e){
