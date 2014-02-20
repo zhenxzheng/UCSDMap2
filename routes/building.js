@@ -1,6 +1,15 @@
 var buildings = require('../buildingdata.json');
 
-exports.view = function(req, res){
-	var randomBuilding = buildings[Math.floor(buildings.length * Math.random())];
-	res.json(randomBuilding);
+exports.buildingInfo = function(req, res){
+	var buildingCode = req.params.code;
+	//var randomBuilding = buildings[Math.floor(buildings.length * Math.random())];
+	var building = 'No Result.';
+	for (var i in buildings){
+		tempInfo = buildings[i];
+		if (buildingCode == tempInfo['code']) {
+			building = tempInfo;
+			break;
+		}
+	}
+	res.json(building);
 };
