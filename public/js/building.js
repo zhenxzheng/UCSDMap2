@@ -108,3 +108,11 @@ function GoogleMap()
     // Google map
     map = new google.maps.Map(map_canvas, map_options);
 }
+
+function pressEnter(e){
+	if (e.keyCode == 13){
+		var tb = document.getElementById('buildingInput');
+		updateResult(e);
+		return false;
+	}
+}
