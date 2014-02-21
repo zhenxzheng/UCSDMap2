@@ -11,6 +11,8 @@ var h = window.innerHeight
 var pos;
 var map;
 var marker;
+var gpsMarker;
+var followGps = 0;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -51,12 +53,15 @@ function getBuildingDetails(result){
 	}
 	$('.result').html(detailsHTML);
 
+	//Removing previous Marker
+	if( marker != null ) {marker.setMap(null);}
+
+	//Setting new Marker
 	var pos = new google.maps.LatLng(result['lat'], result['long']);
-	var image
 	marker = new google.maps.Marker({
     	position: pos,
     	map: map,
-    	image: image,
+    	//image: image,
     	title:"Testest!"
     });
 
@@ -70,27 +75,6 @@ function getBuildingDetails(result){
 
 function GoogleMap()
 {
-	//GPS Location
-	if(navigator.geolocation) {
-	    navigator.geolocation.getCurrentPosition(function(position) {
-	      pos = new google.maps.LatLng(position.coords.latitude,
-	                                       position.coords.longitude);
-
-	      var infowindow = new google.maps.InfoWindow({
-	        map: map,
-	        position: pos,
-	        content: 'You are here.'
-	      });
-
-	      map.setCenter(pos);
-	    }, function() {
-	      handleNoGeolocation(true);
-	    });
-	  } else {
-	    // Browser doesn't support Geolocation
-	    handleNoGeolocation(false);
-	  }
-
 	// get map section ID
 	var map_canvas = document.getElementById('map_canvas');
 
@@ -109,11 +93,22 @@ function GoogleMap()
 
     // Google map
     map = new google.maps.Map(map_canvas, map_options);
+	
 
 	var gpsDiv = document.createElement('div');
 	var gpsButton = new gpsControl(gpsDiv, map);
 	gpsDiv.index = 1;
 	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(gpsDiv);
+
+	//Initialize GPS Marker
+	gpsMarker = new google.maps.Marker({
+	    map: map,
+	    icon: 'images/clocation.png'
+	});
+
+	//GPS Location
+	centerGps();
+	var gpsThread = window.setInterval(updateGps, 100);
 }
 
 function gpsControl( controlDiv, map )
@@ -138,9 +133,57 @@ function gpsControl( controlDiv, map )
 	controlImage.src = 'images/gps.png';
 	controlUI.appendChild(controlImage);
 	google.maps.event.addDomListener(controlUI, 'click', function() {
-      map.setCenter(pos)
+      if( navigator.geolocation ) {
+      	centerGps();
+      }
+      else
+      {
+      	var floatingMessage = document.createElement('div');
+      	floatingMessage.style.backgroundColor = 'black';
+      	floatingMessage.style.textAlign = 'center';
+      	floatingMessage.style.color = 'white';
+      	floatingMessage.innerHTML = '<p>Your GPS is either disabled or does not exist.</p>'
+      }
+
     });
 	
+}
+
+function updateGps()
+{
+	if(navigator.geolocation) {
+	    navigator.geolocation.getCurrentPosition(function(position) {
+	      pos = new google.maps.LatLng(position.coords.latitude,
+	                                       position.coords.longitude);
+
+	      gpsMarker.setPosition(pos);
+	      if( followGps == true )	{map.setCenter(pos);}
+	    }, function() {
+	      handleNoGeolocation(true);
+	    });
+	  } else {
+	    // Browser doesn't support Geolocation
+	    handleNoGeolocation(false);
+	  }
+}
+
+function centerGps()
+{
+	if(navigator.geolocation) {
+	    navigator.geolocation.getCurrentPosition(function(position) {
+	      pos = new google.maps.LatLng(position.coords.latitude,
+	                                       position.coords.longitude);
+
+	      gpsMarker.setPosition(pos);
+	      map.setCenter(pos);
+
+	    }, function() {
+	      handleNoGeolocation(true);
+	    });
+	  } else {
+	    // Browser doesn't support Geolocation
+	    handleNoGeolocation(false);
+	  }	
 }
 
 function pressEnter(e){
@@ -150,4 +193,15 @@ function pressEnter(e){
 		$('#buildingInput').blur();
 		return false;
 	}
+}
+
+function handleNoGeolocation(errorFlag) {
+  	if (errorFlag == true) {
+      //alert("Geolocation service failed.");
+      //initialLocation = newyork;
+    } else {
+      //alert("Your browser doesn't support geolocation. We've placed you in Siberia.");
+      //initialLocation = siberia;
+    }
+    //map.setCenter(initialLocation);
 }

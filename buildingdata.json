@@ -280,7 +280,9 @@
 			"code": "MCGIL",
 			"name": "McGill Hall",
 			"location": "Muir",
-			"buildingnumber": "246"
+			"buildingnumber": "246",
+			"lat": "32.879092",
+			"long": "-117.242211"
 		},
 		{
 			"code": "MNDLR",
