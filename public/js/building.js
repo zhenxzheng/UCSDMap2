@@ -122,12 +122,10 @@ function getBuildingDetails(result){
 
 	if(building != 'No Result.'){
 		//Setting new Marker
-		var pos = new google.maps.LatLng(-117.234173, -117.234173);
+		pos = new google.maps.LatLng(32.874587, -117.234173);
 		marker = new google.maps.Marker({
-	    	position: pos,
 	    	map: map,
-	    	//image: image,
-	    	title:"Testest!"
+	    	position: pos
 	    });
 
 		map.setCenter(pos);
@@ -173,7 +171,7 @@ function GoogleMap()
 	});*/
 
 	//GPS Location
-	//centerGps();
+	centerGps();
 	//var gpsThread = window.setInterval(updateGps, 100);
 }
 
