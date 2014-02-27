@@ -41,7 +41,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 //app.get('/project/:id', project.projectInfo);
 app.get('/palette', palette.randomPalette);
-app.get('/building/:code', building.buildingInfo)
+app.get('/building', building.buildingList)
 // Example route
 // app.get('/users', user.list);
 

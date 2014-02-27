@@ -5,577 +5,743 @@
 			"name": "Applied Physics & Mathematics Building",
 			"location": "Muir",
 			"buildingnumber": "249",
-			"lat": "32.85615",
-			"long": "-117.230747"
+			"lat": "32.879006",
+			"long": "-117.240854"
 		},
 		{
 			"code":"ASANT",
-			"name": "Asante Hall",
+			"name": "Asante Hall West",
 			"location": "Eleanor Roosevelt",
 			"buildingnumber": "446",
-			"lat": "32.881615",
-			"long": "-117.270747"			
+			"lat": "32.884310",
+			"long": "-117.242139"			
+		},
+		{
+			"code":"ASANT",
+			"name": "Asante Hall East",
+			"location": "Eleanor Roosevelt",
+			"buildingnumber": "446",
+			"lat": "32.884299",
+			"long": "-117.241796"			
 		},
 		{
 			"code": "BIO",
 			"name": "Biology Building",
 			"location": "Muir",
 			"buildingnumber": "259",
-			"lat": "32.881605",
-			"long": "-117.230737"
+			"lat": "32.884310",
+			"long": "-117.242139"
 		},
 		{
 			"code": "BIRCH",
 			"name": "Birch Aquarium",
 			"location": "SIO",
-			"buildingnumber": "2300"
+			"buildingnumber": "2300",
+			"lat": "32.884310",
+			"long": "-117.242139"
 		},
 		{
 			"code": "BONN",
 			"name": "Bonner Hall",
 			"location": "Revelle",
-			"buildingnumber": "131"
+			"buildingnumber": "131",
+			"lat": "32.876119",
+			"long": "-117.240383"
 		},
 		{
 			"code": "BSB",
 			"name": "Biomedical Sciences Building",
 			"location": "Medical School",
-			"buildingnumber": "820"
+			"buildingnumber": "820",
+			"lat": "32.875668",
+			"long": "-117.236081"
 		},
 		{
 			"code": "CCC",
 			"name": "Cross-Cultural Center",
 			"location": "University Center",
-			"buildingnumber": "720"
+			"buildingnumber": "720",
+			"lat": "32.879687",
+			"long": "-117.236533"
 		},
 		{
 			"code": "CENTR",
 			"name": "Center Hall",
 			"location": "University Center",
-			"buildingnumber": "984"
+			"buildingnumber": "984",
+			"lat": "32.877967",
+			"long": "-117.237220"
 		},
 		{
 			"code": "CICC",
 			"name": "Copely International Conference Center",
 			"location": "Eleanor Roosevelt",
-			"buildingnumber": "455"
+			"buildingnumber": "455",
+			"lat": "32.885009",
+			"long": "-117.241318"
 		},
 		{
 			"code": "CILAS",
 			"name": "Center for Iberian and Latin American Studies",
 			"location": "Eleanor Roosevelt",
-			"buildingnumber": "451"
-		},
-		{
-			"code": "CLICS",
-			"name": "Center for Library & Instructional Computing Services",
-			"location": "Revelle",
-			"buildingnumber": "141"
+			"buildingnumber": "451",
+			"lat": "32.885580",
+			"long": "-117.241347"
 		},
 		{
 			"code": "CLIN",
 			"name": "Clinical Sciences Building / Clinical Research Facility",
 			"location": "Medical School",
-			"buildingnumber": "865"
+			"buildingnumber": "865",
+			"lat": "32.874587",
+			"long": "-117.234173"
 		},
 		{
 			"code": "CMG",
 			"name": "Center for Molecular Genetics",
 			"location": "Medical School",
-			"buildingnumber": "805"
+			"buildingnumber": "805",
+			"lat": "32.875661",
+			"long": "-117.238373"
 		},
 		{
 			"code": "CMME",
 			"name": "Center for Molecular Medicine East",
 			"location": "Medical School",
-			"buildingnumber": "803"
+			"buildingnumber": "803",
+			"lat": "32.876369",
+			"long": "-117.237682"
 		},
 		{
 			"code": "CMMW",
 			"name": "Center for Molecular Medicine West",
 			"location": "Medical School",
-			"buildingnumber": "801"
+			"buildingnumber": "801",
+			"lat": "32.876332",
+			"long": "-117.238405"
 		},
 		{
 			"code": "CMRR",
 			"name": "Center for Magnetic Recording Research",
 			"location": "Warren",
-			"buildingnumber": "620"
+			"buildingnumber": "620",
+			"lat": "32.880496",
+			"long": "-117.235435"
 		},
 		{
 			"code": "CPMC",
 			"name": "Conrad Prebys Music Center",
 			"location": "University Center",
-			"buildingnumber": "N/A"
+			"buildingnumber": "N/A",
+			"lat": "32.878118",
+			"long": "-117.234865"
 		},
 		{
 			"code": "CRB",
 			"name": "Chemistry Research Building",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "393"
+			"buildingnumber": "393",
+			"lat": "32.880742",
+			"long": "-117.240150"
 		},
 		{
 			"code": "CSB",
 			"name": "Cognitive Science Building",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "397"
+			"buildingnumber": "397",
+			"lat": "32.880479",
+			"long": "-117.239228"
 		},
 		{
 			"code": "DANCE",
 			"name": "Wagner Dance Building",
 			"location": "Revelle",
-			"buildingnumber": "175"
+			"buildingnumber": "175",
+			"lat": "32.871829",
+			"long": "-117.240107"
 		},
 		{
 			"code": "DSD",
 			"name": "Deep Sea Drilling Building",
 			"location": "SIO",
-			"buildingnumber": "East: 2310, West: 2350"
+			"buildingnumber": "East: 2310, West: 2350",
+			"lat": "32.867375",
+			"long": "-117.251409"
 		},
 		{
 			"code": "EBU1",
 			"name": "Engineering Building Unit 1",
 			"location": "Warren",
-			"buildingnumber": "600"
+			"buildingnumber": "600",
+			"lat": "32.881616",
+			"long": "-117.235246"
 		},
 		{
 			"code": "EBU2",
 			"name": "Engineering Building Unit 2",
 			"location": "Warren",
-			"buildingnumber": "610"
+			"buildingnumber": "610",
+			"lat": "32.881107",
+			"long": "-117.233028"
 		},
 		{
 			"code": "EBU3B",
 			"name": "Engineering Building Unit 3",
 			"location": "Warren",
-			"buildingnumber": "602"
+			"buildingnumber": "602",
+			"lat": "32.881871",
+			"long": "-117.233549"
 		},
 		{
 			"code": "ECKRT",
 			"name": "SIO Library, Eckart Building",
 			"location": "SIO",
-			"buildingnumber": "8755"
+			"buildingnumber": "8755",
+			"lat": "32.867236",
+			"long": "-117.252509"
 		},
 		{
 			"code": "ECON",
 			"name": "Economics Building",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "370"
+			"buildingnumber": "370",
+			"lat": "32.882358",
+			"long": "-117.240406"
 		},
 		{
 			"code": "ERCA",
 			"name": "Eleanor Roosevelt College Administration",
 			"location": "Eleanor Rooservelt",
-			"buildingnumber": "440"
+			"buildingnumber": "440",
+			"lat": "32.886122",
+			"long": "-117.242080"
 		},
 		{
 			"code": "FORUM",
 			"name": "Mandell Weiss Forum",
 			"location": "Revelle",
-			"buildingnumber": "173"
+			"buildingnumber": "173",
+			"lat": "32.872148",
+			"long": "-117.241099"
 		},
 		{
 			"code": "N/A",
 			"name": "Mandell Weiss Theatre",
 			"location": "Revelle",
-			"buildingnumber": "171"
+			"buildingnumber": "171",
+			"lat": "32.872091",
+			"long": "-117.241117"
 		},
 		{
 			"code": "GEISL",
 			"name": "Geisel Library",
 			"location": "University Center",
-			"buildingnumber": "900"
+			"buildingnumber": "900",
+			"lat": "32.881119",
+			"long": "-117.237571"
 		},
 		{
 			"code": "GH",
 			"name": "Galbraith Hall",
 			"location": "Revelle",
-			"buildingnumber": "141"
+			"buildingnumber": "141",
+			"lat": "32.873982",
+			"long": "-117.240941"
 		},
 		{
 			"code": "N/A",
 			"name": "Arthur Wagner Theatre (In Galbraith Hall)",
 			"location": "Revelle",
-			"buildingnumber": "N/A"
+			"buildingnumber": "N/A",
+			"lat": "32.873946",
+			"long": "-117.240947"
 		},
 		{
 			"code": "HSS",
 			"name": "Humanities & Social Sciences Building",
 			"location": "Muir",
-			"buildingnumber": "250"
+			"buildingnumber": "250",
+			"lat": "32.878470",
+			"long": "-117.241686"
 		},
 		{
 			"code": "HUBBS",
 			"name": "Hubbs Hall",
 			"location": "SIO",
-			"buildingnumber": "8750"
+			"buildingnumber": "8750",
+			"lat": "32.867432",
+			"long": "-117.253430"
 		},
 		{
 			"code": "IGPP",
 			"name": "Institute of Geophysics & Planetary Physics - Munk Lab",
 			"location": "SIO",
-			"buildingnumber": "8800"
+			"buildingnumber": "8800",
+			"lat": "32.868316",
+			"long": "-117.252939"
 		},
 		{
 			"code": "IGPP",
 			"name": "Institution of Geophysics & Planetary Physics - Revelle Lab",
 			"location": "SIO",
-			"buildingnumber": "8795"
+			"buildingnumber": "8795",
+			"lat": "32.867894",
+			"long": "-117.252451"
 		},
 		{
 			"code": "IOA",
 			"name": "Institute of the Americas",
 			"location": "Eleanor Roosevelt",
-			"buildingnumber": "453"
+			"buildingnumber": "453",
+			"lat": "32.885328",
+			"long": "-117.241022"
 		},
 		{
 			"code": "LASB",
 			"name": "Latin American Studies Building",
 			"location": "Eleanor Roosevelt",
-			"buildingnumber": "453"
+			"buildingnumber": "453",
+			"lat": "32.885576",
+			"long": "-117.241342"
 		},
 		{
 			"code": "LEDDN AUD",
-			"name": "Patrick J. Ledden Auditorium (formerly HSS 2250)",
+			"name": "Patrick J. Ledden Auditorium",
 			"location": "Muir",
-			"buildingnumber": "250"
+			"buildingnumber": "250",
+			"lat": "32.878778",
+			"long": "-117.241663"
 		},
 		{
 			"code": "LFFB",
 			"name": "Leichtag Family Foundation Biomedical Research Building",
 			"location": "Medical School",
-			"buildingnumber": "804"
+			"buildingnumber": "804",
+			"lat": "32.876671",
+			"long": "-117.236778"
 		},
 		{
 			"code": "LIT",
 			"name": "Literature Building",
 			"location": "Warren",
-			"buildingnumber": "627"
+			"buildingnumber": "627",
+			"lat": "32.880573",
+			"long": "-117.233809"
 		},
 		{
 			"code": "MANDE",
 			"name": "Mandeville Center",
 			"location": "Muir",
-			"buildingnumber": "285"
+			"buildingnumber": "285",
+			"lat": "32.877810",
+			"long": "-117.239929"
 		},
 		{
 			"code": "MAYER",
 			"name": "Mayer Hall",
 			"location": "Revelle",
-			"buildingnumber": "133"
+			"buildingnumber": "133",
+			"lat": "32.875336",
+			"long": "-117.240241"
 		},
 		{
 			"code": "MYR-A",
 			"name": "Mayer Hall Addition",
 			"location": "Revelle",
-			"buildingnumber": "133"
+			"buildingnumber": "133",
+			"lat": "32.875638",
+			"long": "-117.239852"
 		},
 		{
 			"code": "MCC",
 			"name": "Media Center/Communication Building",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "390"
+			"buildingnumber": "390",
+			"lat": "32.881464",
+			"long": "-117.240197"
 		},
 		{
 			"code": "MCGIL",
 			"name": "McGill Hall",
 			"location": "Muir",
 			"buildingnumber": "246",
-			"lat": "32.879092",
-			"long": "-117.242211"
+			"lat": "32.879000",
+			"long": "-117.242076"
 		},
 		{
 			"code": "MNDLR",
-			"name": "Mandler Hall (formerly McGill Hall Annex)",
+			"name": "Mandler Hall",
 			"location": "Muir",
-			"buildingnumber": "245"
+			"buildingnumber": "245",
+			"lat": "32.879327",
+			"long": "-117.242166"
 		},
 		{
 			"code": "MTF",
 			"name": "Medical Teaching Facility",
 			"location": "Medical School",
-			"buildingnumber": "830"
+			"buildingnumber": "830",
+			"lat": "32.876121",
+			"long": "-117.235428"
 		},
 		{
 			"code": "MWEIS",
 			"name": "Mandell Weiss Theatre",
 			"location": "Revelle",
-			"buildingnumber": "171"
+			"buildingnumber": "171",
+			"lat": "32.870956",
+			"long": "-117.241286"
 		},
 		{
 			"code": "NIERN",
-			"name": "Nierenberg Hall Annex",
+			"name": "Nierenberg Hall",
 			"location": "SIO",
-			"buildingnumber": "8810"
+			"buildingnumber": "8810",
+			"lat": "32.868755",
+			"long": "-117.251154"
 		},
 		{
 			"code": "NSB",
 			"name": "Faustina Solis Lecture Hall",
 			"location": "Revelle",
-			"buildingnumber": "128"
+			"buildingnumber": "128",
+			"lat": "32.875284",
+			"long": "-117.242819"
 		},
 		{
 			"code": "NTV",
 			"name": "Nierenberg Hall Annex",
 			"location": "SIO",
-			"buildingnumber": "8820"
+			"buildingnumber": "8820",
+			"lat": "32.869086",
+			"long": "-117.251038"
 		},
 		{
 			"code": "OAR",
 			"name": "Keck Center for Ocean & Atmospheric Research",
 			"location": "SIO",
-			"buildingnumber": "8831"
-		},
-		{
-			"code": "OFF",
-			"name": "Off Campus",
-			"location": "Off Campus",
-			"buildingnumber": "N/A"
+			"buildingnumber": "8831",
+			"lat": "32.869407",
+			"long": "-117.250774"
 		},
 		{
 			"code": "OTRSN",
-			"name": "Otterson Hall (Main building for Rady)",
+			"name": "Otterson Hall",
 			"location": "N/A",
-			"buildingnumber": "N/A"
+			"buildingnumber": "N/A",
+			"lat": "32.886695",
+			"long": "-117.241066"
 		},
 		{
 			"code": "PACIF",
 			"name": "Pacific Hall",
 			"location": "Revelle",
-			"buildingnumber": "111"
+			"buildingnumber": "111",
+			"lat": "32.875911",
+			"long": "-117.242200"
 		},
 		{
 			"code": "PCYNH",
 			"name": "Pepper Canyon Hall",
 			"location": "University Center",
-			"buildingnumber": "780"
+			"buildingnumber": "780",
+			"lat": "32.878376",
+			"long": "-117.233750"
 		},
 		{
 			"code": "PETER",
 			"name": "Peterson Hall",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "399"
+			"buildingnumber": "399",
+			"lat": "32.879991",
+			"long": "-117.240240"
 		},
 		{
 			"code": "PFBH",
 			"name": "Powell-Focht Bioengineering Hall",
 			"location": "Warren",
-			"buildingnumber": "601"
+			"buildingnumber": "601",
+			"lat": "32.881560",
+			"long": "-117.234370"
 		},
 		{
 			"code": "POTKR",
 			"name": "Potiker Theatre",
 			"location": "Revelle",
-			"buildingnumber": "177"
+			"buildingnumber": "177",
+			"lat": "32.871352",
+			"long": "-117.240743"
 		},
 		{
 			"code": "PRICE",
 			"name": "Price Center",
 			"location": "University Center",
-			"buildingnumber": "911"
+			"buildingnumber": "911",
+			"lat": "32.879728",
+			"long": "-117.236985"
 		},	
 		{
 			"code": "RBC",
 			"name": "Robinson Building Complex",
 			"location": "Eleanor Roosevelt",
-			"buildingnumber": "463"
+			"buildingnumber": "463",
+			"lat": "32.884279",
+			"long": "-117.240874"
 		},	
 		{
 			"code": "RECGM",
 			"name": "Recreation Gymnasium",
 			"location": "Muir",
-			"buildingnumber": "265"
+			"buildingnumber": "265",
+			"lat": "32.876724",
+			"long": "-117.241254"
 		},	
 		{
 			"code": "RITTR",
 			"name": "Ritter Hall",
 			"location": "SIO",
-			"buildingnumber": "8635"
+			"buildingnumber": "8635",
+			"lat": "32.865269",
+			"long": "-117.253755"
 		},	
 		{
 			"code": "RVCOM",
 			"name": "Revelle Commons (Plaza Cafe)",
 			"location": "Revelle",
-			"buildingnumber": "127"
+			"buildingnumber": "127",
+			"lat": "32.874678",
+			"long": "-117.242037"
 		},	
 		{
 			"code": "RVPRO",
 			"name": "Revelle College Administration Building",
 			"location": "Revelle",
-			"buildingnumber": "149"
+			"buildingnumber": "149",
+			"lat": "32.873322",
+			"long": "-117.239891"
 		},	
 		{
 			"code": "SCHOL",
 			"name": "Scholander Hall",
 			"location": "SIO",
-			"buildingnumber": "8655"
+			"buildingnumber": "8655",
+			"lat": "32.865931",
+			"long": "-117.253810"
 		},	
 		{
 			"code": "SCRB",
 			"name": "Stein Clinical Research Building",
 			"location": "Medical School",
-			"buildingnumber": "843"
+			"buildingnumber": "843",
+			"lat": "32.876128",
+			"long": "-117.234018"
 		},	
 		{
 			"code": "SCRPS",
 			"name": "Old Scripps Building",
 			"location": "SIO",
-			"buildingnumber": "8630"
+			"buildingnumber": "8630",
+			"lat": "32.865067",
+			"long": "-117.254190"
 		},	
 		{
 			"code": "SDSC",
 			"name": "San Diego Supercomputer Center",
 			"location": "Eleanor Roosevelt",
-			"buildingnumber": "481"
+			"buildingnumber": "481",
+			"lat": "32.865931",
+			"long": "-117.253810"
 		},
 		{
 			"code": "SEQUO",
 			"name": "Sequoyah Hall",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "350"
+			"buildingnumber": "350",
+			"lat": "32.882028",
+			"long": "-117.240979"
 		},
 		{
 			"code": "SERF",
 			"name": "Science & Engineering Research Facility",
 			"location": "University Center",
-			"buildingnumber": "930"
+			"buildingnumber": "930",
+			"lat": "32.879739",
+			"long": "-117.235052"
 		},
 		{
 			"code": "SOLIS",
 			"name": "Solis Lecture Hall",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "395"
+			"buildingnumber": "395",
+			"lat": "32.880939",
+			"long": "-117.239650"
 		},
 		{
 			"code": "SSB",
 			"name": "Social Science Building",
 			"location": "Eleanor Roosevelt",
-			"buildingnumber": "490"
+			"buildingnumber": "490",
+			"lat": "32.883922",
+			"long": "-117.240445"
 		},
 		{
 			"code": "SSRB",
 			"name": "Social Sciences Research Building (Formerly Known as Chemistry Research Building)",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "393"
+			"buildingnumber": "393",
+			"lat": "32.880838",
+			"long": "-117.240164"
 		},
 		{
 			"code": "SVERD",
 			"name": "Sverdup Hall",
 			"location": "SIO",
-			"buildingnumber": "8615"
-		},
-		{
-			"code": "TBA",
-			"name": "To Be Arranged",
-			"location": "N/A",
-			"buildingnumber": "N/A"
+			"buildingnumber": "8615",
+			"lat": "32.864445",
+			"long": "-117.253185"
 		},
 		{
 			"code": "TM101-103",
 			"name": "Thurgood Marshall College Trailers",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "392"
+			"buildingnumber": "392",
+			"lat": "32.881291",
+			"long": "-117.239378"
 		},
 		{
 			"code": "TMCA",
 			"name": "Thurgood Marshall College Administration Building",
 			"location": "Thurgood Marshall",
-			"buildingnumber": "360"
+			"buildingnumber": "360",
+			"lat": "32.881398",
+			"long": "-117.241038"
 		},
 		{
 			"code": "U201",
 			"name": "University Center, Building 201",
 			"location": "University Center",
-			"buildingnumber": "985"
+			"buildingnumber": "985",
+			"lat": "32.877479",
+			"long": "-117.236424"
 		},
 		{
 			"code": "U303",
 			"name": "University Center, Building 303, Cancer Research Facility",
 			"location": "University Center",
-			"buildingnumber": "958"
+			"buildingnumber": "958",
+			"lat": "32.877614",
+			"long": "-117.235300"
 		},
 		{
 			"code": "U409",
 			"name": "University Center, Building 409",
 			"location": "University Center",
-			"buildingnumber": "942"
+			"buildingnumber": "942",
+			"lat": "32.879120",
+			"long": "-117.234765"
 		},
 		{
 			"code": "U413",
 			"name": "University Center, Building 413",
 			"location": "University Center",
-			"buildingnumber": "955"
+			"buildingnumber": "955",
+			"lat": "32.879058",
+			"long": "-117.232078"
 		},
 		{
 			"code": "U413A",
 			"name": "University Center, Building 413A",
 			"location": "University Center",
-			"buildingnumber": "955"
+			"buildingnumber": "955",
+			"lat": "32.879058",
+			"long": "-117.232078"
 		},
 		{
 			"code": "U515",
-			"name": "University Center, Building 515 (formerly R515)",
+			"name": "University Center, Building 515",
 			"location": "University Center",
-			"buildingnumber": "727"
+			"buildingnumber": "727",
+			"lat": "32.884310",
+			"long": "-117.242139"
 		},
 		{
 			"code": "U516",
-			"name": "University Center, Building 516 (formerly R516)",
+			"name": "University Center, Building 516",
 			"location": "University Center",
-			"buildingnumber": "728"
+			"buildingnumber": "728",
+			"lat": "32.884310",
+			"long": "-117.242139"
 		},
 		{
 			"code": "U517",
-			"name": "University Center, Building 517 (formerly R517)",
+			"name": "University Center, Building 517",
 			"location": "University Center",
-			"buildingnumber": "726"
+			"buildingnumber": "726",
+			"lat": "32.884310",
+			"long": "-117.242139"
 		},
 		{
 			"code": "U518",
-			"name": "University Center, Building 518 (formerly R518)",
+			"name": "University Center, Building 518",
 			"location": "University Center",
-			"buildingnumber": "729"
+			"buildingnumber": "729",
+			"lat": "32.884310",
+			"long": "-117.242139"
 		},
 		{
 			"code": "UNEX",
 			"name": "University Extension Complex",
 			"location": "Marshall",
-			"buildingnumber": "325"
+			"buildingnumber": "325",
+			"lat": "32.881954",
+			"long": " -117.243368"
 		},
 		{
 			"code": "UREY",
 			"name": "Urey Hall",
 			"location": "Revelle",
-			"buildingnumber": "113"
+			"buildingnumber": "113",
+			"lat": "32.875580",
+			"long": "-117.241277"
 		},
 		{
 			"code": "URY-A",
 			"name": "Urey Hall Addition",
 			"location": "Revelle",
-			"buildingnumber": "114"
+			"buildingnumber": "114",
+			"lat": "32.875208",
+			"long": "-117.240985"
 		},
 		{
 			"code": "VAF",
 			"name": "Visual Arts Facility (formerly VIS)",
 			"location": "Sixth",
-			"buildingnumber": "711"
+			"buildingnumber": "711",
+			"lat": "32.879120",
+			"long": "-117.233993"
 		},
 		{
 			"code": "VAUGN",
 			"name": "Vaughan Hall",
 			"location": "SIO",
-			"buildingnumber": "8675"
+			"buildingnumber": "8675",
+			"lat": "32.865342",
+			"long": "-117.253003"
 		},
 		{
 			"code": "WLH",
 			"name": "Wareen Lecture Hall",
 			"location": "Warren",
-			"buildingnumber": "625"
+			"buildingnumber": "625",
+			"lat": "32.880621",
+			"long": "-117.234422"
 		},
 		{
 			"code": "YORK",
 			"name": "York Hall, Undergraduate Sciences Building",
 			"location": "Revelle",
-			"buildingnumber": "137"
+			"buildingnumber": "137",
+			"lat": "32.874527",
+			"long": "-117.240018"
 		}
 	]

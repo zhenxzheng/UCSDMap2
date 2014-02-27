@@ -22,4 +22,6 @@ button a{
 #result{
 	padding: 10px 0px 10px 0px;
 }
-#
+#navbar{
+	z-index: 1;
+}

@@ -30,6 +30,30 @@ function initializePage() {
 	$('#map_container').css('height', h);
 	$('#map_canvas').css('width', w);
 	$('#map_canvas').css('height', h-26);
+
+	$.get("/building", setBuildingList);
+
+
+}
+
+function setBuildingList(result){
+	//console.log(result);
+	var buildingList = [];
+
+	for( var i in result ){
+		var tempInfo = result[i];
+		buildingList[i] = tempInfo['name'];
+
+		if( tempInfo['code'] != 'N/A' || tempInfo['buildingnumber'] != 'N/A'){ buildingList[i]+=" |";}
+
+		if( tempInfo['code'] != 'N/A'){ buildingList[i] += ' (' + tempInfo['code'] + ')'; } 
+		if( tempInfo['buildingnumber'] != 'N/A'){ buildingList[i] += ' [' + tempInfo['buildingnumber'] + ']'; } 
+	}
+
+    var availableTags = buildingList;
+    $( "#buildingInput" ).autocomplete({
+      source: availableTags
+    });
 }
 
 function updateResult(e) {
@@ -37,35 +61,77 @@ function updateResult(e) {
 	e.preventDefault();
 	console.log("user clicked on search button");
 	var buildingCode = $('#buildingInput').val();
-	$.get("/building/" + buildingCode, getBuildingDetails);
+	//buildingCode = buildingCode.toUpperCase();
+	$.get("/building", getBuildingDetails);
 }
 
 function getBuildingDetails(result){
+	var building = 'No Result.';
+	var buildingInput = $('#buildingInput').val();
 
-	console.log(result);
+	var indexOfBar =  buildingInput.indexOf("|");
+	if( indexOfBar != -1 )
+	{
+		buildingInput = buildingInput.substring(0, indexOfBar-1);
+		console.log(buildingInput);
+	}
+
+
+
+	for (var i in result){
+		var tempInfo = result[i];
+		if (buildingInput == tempInfo['name']) {
+			building = tempInfo;
+			break;
+		}
+	}
+
+	if( building == 'No Result.'){
+		for (var i in result){
+			var tempInfo = result[i];
+			if (buildingInput == tempInfo['code']) {
+				building = tempInfo;
+				break;
+			}
+		}
+	}
+
+	if( building == 'No Result.'){
+		for (var i in result){
+			var tempInfo = result[i];
+			if (buildingInput == tempInfo['buildingnumber']) {
+				building = tempInfo;
+				break;
+			}
+		}
+	}
+
+	//console.log(result);
 	var detailsHTML;
 	//set result HTML
-	if (result == 'No Result.'){
-		var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom" id="result"><div class="container"><strong>'+result+'</strong></div></nav>';
+	if (building == 'No Result.'){
+		var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom" id="result"><div class="container"><strong>'+building+'</strong></div></nav>';
 	}
 	else {
-		var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom" id="result"><div class="container"><strong>'+result['name']+'</strong><br><small>'+result['location']+ " " +result['buildingnumber']+'</div></nav>';
+		var detailsHTML = '<nav class="navbar navbar-inverse navbar-fixed-bottom" id="result"><div class="container"><strong>'+building['name']+'</strong><br><small>'+building['location']+ " " +building['buildingnumber']+'</div></nav>';
 	}
 	$('.result').html(detailsHTML);
 
 	//Removing previous Marker
 	if( marker != null ) {marker.setMap(null);}
 
-	//Setting new Marker
-	var pos = new google.maps.LatLng(result['lat'], result['long']);
-	marker = new google.maps.Marker({
-    	position: pos,
-    	map: map,
-    	//image: image,
-    	title:"Testest!"
-    });
+	if(building != 'No Result.'){
+		//Setting new Marker
+		var pos = new google.maps.LatLng(building['lat'], building['long']);
+		marker = new google.maps.Marker({
+	    	position: pos,
+	    	map: map,
+	    	//image: image,
+	    	title:"Testest!"
+	    });
 
-	map.setCenter(pos);
+		map.setCenter(pos);
+	}
 	//get random corrdinates that are within the screen
 	//var randomX = Math.floor(w * Math.random());
 	//var randomY = Math.floor(h * Math.random());
