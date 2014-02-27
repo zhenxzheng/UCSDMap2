@@ -124,8 +124,8 @@ function getBuildingDetails(result){
 		//Setting new Marker
 		pos = new google.maps.LatLng(32.874587, -117.234173);
 		marker = new google.maps.Marker({
-	    	map: map,
-	    	position: pos
+	    	position: pos,
+	    	map: map
 	    });
 
 		map.setCenter(pos);
