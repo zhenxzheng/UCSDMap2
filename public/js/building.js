@@ -13,6 +13,7 @@ var map;
 var marker;
 var gpsMarker;
 var followGps = 0;
+var dataList;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -32,12 +33,11 @@ function initializePage() {
 	$('#map_canvas').css('height', h-26);
 
 	$.get("/building", setBuildingList);
-
-
 }
 
 function setBuildingList(result){
 	//console.log(result);
+	dataList = result;
 	var buildingList = [];
 
 	for( var i in result ){
@@ -62,7 +62,7 @@ function updateResult(e) {
 	console.log("user clicked on search button");
 	var buildingCode = $('#buildingInput').val();
 	//buildingCode = buildingCode.toUpperCase();
-	$.get("/building", getBuildingDetails);
+	getBuildingDetails(dataList);
 }
 
 function getBuildingDetails(result){
