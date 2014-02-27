@@ -13,6 +13,7 @@ var map;
 var marker;
 var gpsMarker;
 var followGps = 0;
+var dataList;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -38,6 +39,7 @@ function initializePage() {
 
 function setBuildingList(result){
 	//console.log(result);
+	dataList = result;
 	var buildingList = [];
 
 	for( var i in result ){
@@ -62,7 +64,8 @@ function updateResult(e) {
 	console.log("user clicked on search button");
 	var buildingCode = $('#buildingInput').val();
 	//buildingCode = buildingCode.toUpperCase();
-	$.get("/building", getBuildingDetails);
+	//$.get("/building", getBuildingDetails);
+	getBuildingDetails(dataList);
 }
 
 function getBuildingDetails(result){
@@ -124,11 +127,11 @@ function getBuildingDetails(result){
 		//Setting new Marker
 		var pos = new google.maps.LatLng(building['lat'], building['long']);
 		marker = new google.maps.Marker({
+	    	position: pos,
 	    	map: map,
 	    	icon: 'images/clocation.png'
 	    });
 
-		map.setPosition(pos);
 		map.setCenter(pos);
 	}
 	//get random corrdinates that are within the screen
