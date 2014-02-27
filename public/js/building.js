@@ -124,12 +124,10 @@ function getBuildingDetails(result){
 		//Setting new Marker
 		var pos = new google.maps.LatLng(building['lat'], building['long']);
 		marker = new google.maps.Marker({
-	    	position: pos,
-	    	map: map,
-	    	//image: image,
-	    	title:"Testest!"
+	    	map: map
 	    });
 
+		map.setPosition(pos);
 		map.setCenter(pos);
 	}
 	//get random corrdinates that are within the screen
