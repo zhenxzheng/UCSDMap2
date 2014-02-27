@@ -122,9 +122,8 @@ function getBuildingDetails(result){
 
 	if(building != 'No Result.'){
 		//Setting new Marker
-		var pos = new google.maps.LatLng(building['lat'], building['long']);
 		marker = new google.maps.Marker({
-	    	position: pos,
+	    	position: new google.maps.LatLng(building['lat'], building['long']);,
 	    	map: map,
 	    	//image: image,
 	    	title:"Testest!"
