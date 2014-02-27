@@ -13,7 +13,6 @@ var map;
 var marker;
 var gpsMarker;
 var followGps = 0;
-var dataList;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -33,11 +32,12 @@ function initializePage() {
 	$('#map_canvas').css('height', h-26);
 
 	$.get("/building", setBuildingList);
+
+
 }
 
 function setBuildingList(result){
 	//console.log(result);
-	dataList = result;
 	var buildingList = [];
 
 	for( var i in result ){
@@ -62,7 +62,7 @@ function updateResult(e) {
 	console.log("user clicked on search button");
 	var buildingCode = $('#buildingInput').val();
 	//buildingCode = buildingCode.toUpperCase();
-	getBuildingDetails(dataList);
+	$.get("/building", getBuildingDetails);
 }
 
 function getBuildingDetails(result){
@@ -122,10 +122,12 @@ function getBuildingDetails(result){
 
 	if(building != 'No Result.'){
 		//Setting new Marker
-		pos = new google.maps.LatLng(32.874587, -117.234173);
+		var pos = new google.maps.LatLng(building['lat'], building['long']);
 		marker = new google.maps.Marker({
 	    	position: pos,
-	    	map: map
+	    	map: map,
+	    	//image: image,
+	    	title:"Testest!"
 	    });
 
 		map.setCenter(pos);
@@ -165,14 +167,14 @@ function GoogleMap()
 	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(gpsDiv);
 
 	//Initialize GPS Marker
-	/*gpsMarker = new google.maps.Marker({
+	gpsMarker = new google.maps.Marker({
 	    map: map,
 	    icon: 'images/clocation.png'
-	});*/
+	});
 
 	//GPS Location
 	centerGps();
-	//var gpsThread = window.setInterval(updateGps, 100);
+	var gpsThread = window.setInterval(updateGps, 100);
 }
 
 function gpsControl( controlDiv, map )
