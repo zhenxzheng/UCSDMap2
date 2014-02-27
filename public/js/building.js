@@ -167,13 +167,13 @@ function GoogleMap()
 	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(gpsDiv);
 
 	//Initialize GPS Marker
-	gpsMarker = new google.maps.Marker({
+	/*gpsMarker = new google.maps.Marker({
 	    map: map,
 	    icon: 'images/clocation.png'
-	});
+	});*/
 
 	//GPS Location
-	centerGps();
+	//centerGps();
 	//var gpsThread = window.setInterval(updateGps, 100);
 }
 
