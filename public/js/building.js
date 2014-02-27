@@ -125,11 +125,10 @@ function getBuildingDetails(result){
 
 	if(building != 'No Result.'){
 		//Setting new Marker
-		var pos = new google.maps.LatLng(building['lat'], building['long']);
+		var pos = new google.maps.LatLng(parseFloat(building['lat']), parseFloat(building['long']));
 		marker = new google.maps.Marker({
 	    	position: pos,
-	    	map: map,
-	    	icon: 'images/clocation.png'
+	    	map: map
 	    });
 
 		map.setCenter(pos);
