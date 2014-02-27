@@ -586,7 +586,7 @@
 		},
 		{
 			"code": "SSRB",
-			"name": "Social Sciences Research Building (Formerly Known as Chemistry Research Building)",
+			"name": "Social Sciences Research Building",
 			"location": "Thurgood Marshall",
 			"buildingnumber": "393",
 			"lat": "32.880838",
@@ -714,7 +714,7 @@
 		},
 		{
 			"code": "VAF",
-			"name": "Visual Arts Facility (formerly VIS)",
+			"name": "Visual Arts Facility",
 			"location": "Sixth",
 			"buildingnumber": "711",
 			"lat": "32.879120",

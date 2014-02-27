@@ -174,7 +174,7 @@ function GoogleMap()
 
 	//GPS Location
 	centerGps();
-	var gpsThread = window.setInterval(updateGps, 100);
+	//var gpsThread = window.setInterval(updateGps, 100);
 }
 
 function gpsControl( controlDiv, map )
