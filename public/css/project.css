@@ -48,12 +48,16 @@ button a{
 #message{
 
 	background-color:#525252;
+	border-radius: 0;
+	border: none;
 	color:white;
 	text-align:center;
 	margin-top:73px;
 	width: 100%;
 	position:fixed;
 	z-index: 3;
+	box-shadow: 0 0 5px #888888;
+
 }
 #message p i {
 	color: gray;
