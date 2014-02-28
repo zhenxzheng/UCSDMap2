@@ -1,3 +1,18 @@
+html{
+	height:100%;
+	width:100%;
+}
+body{
+	height:100%; 
+	width:100%;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+}
+.navbar{
+	border-radius:0;
+	margin-bottom:0;
+}
 #marker{
 	font-size:4em;
 	position: absolute;
@@ -11,12 +26,16 @@ button a{
 	color: black;
 }
 #map_container {
+	height:100%;
+	margin:0;
+	padding:0;
 	overflow-y: hidden;
 	overflow-x: auto;
 }
-#map_canvas {
-	margin-top:73px;
 
+#map_canvas {
+	height:105%;
+	width: 100%;
 }
 
 #result{
@@ -24,4 +43,16 @@ button a{
 }
 #navbar{
 	z-index: 1;
+}
+#instruction{
+	margin-top:73px;
+	margin-bottom:0px;
+	position:fixed;
+	z-index: 0;
+	background-color:#525252;
+	text-align: center;
+	color: white;
+}
+#instruction p i {
+	color: gray;
 }

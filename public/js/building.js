@@ -26,17 +26,20 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	// $("#searchBtn").click(hideInstruction);
 	$("#searchBtn").click(updateResult);
-	$('#map_container').css('width', w);
-	$('#map_container').css('height', h);
-	$('#map_canvas').css('width', w);
-	$('#map_canvas').css('height', h-26);
+	// $('#map_container').css('width', w);
+	// $('#map_container').css('height', h);
+	// $('#map_canvas').css('width', w);
+	// $('#map_canvas').css('height', h-26);
 
 	$.get("/building", setBuildingList);
 
 
 }
-
+// function hideInstruction(){
+// 	('#instruction').hide("slow");
+// }
 function setBuildingList(result){
 	//console.log(result);
 	dataList = result;
@@ -123,15 +126,35 @@ function getBuildingDetails(result){
 	//Removing previous Marker
 	if( marker != null ) {marker.setMap(null);}
 
+	//Adjust display to fit current location marker and location marker within map
 	if(building != 'No Result.'){
-		//Setting new Marker
-		var pos = new google.maps.LatLng(parseFloat(building['lat']), parseFloat(building['long']));
-		marker = new google.maps.Marker({
-	    	position: pos,
-	    	map: map
-	    });
+		var pos;
+		var center;
+		console.log("Hi");
+		if(gpsMarker != null) {
+			console.log("1");
+			var latLngVar = gpsMarker.getPosition();
+			pos = new google.maps.LatLng(parseFloat(building['lat']), parseFloat(building['long']) );
+			center = new google.maps.LatLng((parseFloat(building['lat']) + latLngVar.lat())/2.0, (parseFloat(building['long']) + latLngVar.lng())/2.0);
 
-		map.setCenter(pos);
+			var bounds = new google.maps.LatLngBounds();
+			bounds.extend(latLngVar);
+			bounds.extend(pos);
+
+			map.fitBounds(bounds);
+		}
+		else{
+			console.log("2");
+			pos = new google.maps.LatLng(parseFloat(building['lat']), parseFloat(building['long']));
+			center = pos;
+		}
+
+		marker = new google.maps.Marker({
+		    position: pos,
+		    map: map
+		});
+
+		map.setCenter(center);
 	}
 	//get random corrdinates that are within the screen
 	//var randomX = Math.floor(w * Math.random());
@@ -154,7 +177,12 @@ function GoogleMap()
       streetViewControl: false,
       zoomControl: true,
       zoomControlOptions: {
-      	position: google.maps.ControlPosition.TOPLEFT
+      	position: google.maps.ControlPosition.LEFT_CENTER,
+      	sytle: google.maps.ZoomControlStyle.LARGE
+      },
+      mapTypeControl: true,
+      mapTypeControlOptions:{
+      	position: google.maps.ControlPosition.RIGHT_TOP
       }
     }
 
@@ -165,7 +193,7 @@ function GoogleMap()
 	var gpsDiv = document.createElement('div');
 	var gpsButton = new gpsControl(gpsDiv, map);
 	gpsDiv.index = 1;
-	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(gpsDiv);
+	map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(gpsDiv);
 
 	//Initialize GPS Marker
 	gpsMarker = new google.maps.Marker({
@@ -182,11 +210,15 @@ function gpsControl( controlDiv, map )
 {
 	//controlDiv = document.createElement('div');
 	controlDiv.style.padding = '5px';
+//	controlDiv.style.boxShadow = '0px 0px 5px #888888';
 
 	var controlUI = document.createElement('div');
+	controlUI.style.padding = '2px';
 	controlUI.style.backgroundColor = 'white';
 	controlUI.style.borderStyle = 'solid';
 	controlUI.style.borderWidth = '1px';
+	controlUI.style.borderRadius = '4px';
+	controlUI.style.boxShadow = '0px 0px 5px #888888';
 	controlUI.style.cursor = 'pointer';
 	controlUI.style.textAlign = 'center';
 	controlUI.title = 'Click to locate yourself using GPS';
