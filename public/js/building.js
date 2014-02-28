@@ -26,7 +26,6 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// $("#searchBtn").click(hideInstruction);
 	$("#searchBtn").click(updateResult);
 	// $('#map_container').css('width', w);
 	// $('#map_container').css('height', h);
@@ -37,9 +36,9 @@ function initializePage() {
 
 
 }
-// function hideInstruction(){
-// 	('#instruction').hide("slow");
-// }
+function hideInstruction(){
+	$('#message').hide("slow");
+}
 function setBuildingList(result){
 	//console.log(result);
 	dataList = result;
@@ -64,6 +63,7 @@ function setBuildingList(result){
 function updateResult(e) {
 	// Prevent following the link
 	e.preventDefault();
+	hideInstruction();
 	console.log("user clicked on search button");
 	var buildingCode = $('#buildingInput').val();
 	//buildingCode = buildingCode.toUpperCase();

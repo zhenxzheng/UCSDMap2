@@ -44,15 +44,20 @@ button a{
 #navbar{
 	z-index: 1;
 }
-#instruction{
-	margin-top:73px;
-	margin-bottom:0px;
-	position:fixed;
-	z-index: 0;
+
+#message{
+
 	background-color:#525252;
-	text-align: center;
-	color: white;
+	color:white;
+	text-align:center;
+	margin-top:73px;
+	width: 100%;
+	position:fixed;
+	z-index: 3;
 }
-#instruction p i {
+#message p i {
 	color: gray;
+}
+.alert-dismissable .close{
+	color: white;
 }
